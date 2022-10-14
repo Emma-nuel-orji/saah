@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubai application form</title>
+    <link rel="icon" type="image/jpg" href="static/img/dubai1.jpg" />
+    <link rel="stylesheet" href="static/boostrap/bootstrap-4.3.1/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" type="text/css" href="static/default.css">
+	<link id="theme-style" rel="stylesheet" type="text/css" href="">
+    
+
+   
+</head>  
+
+<body>
+  
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+             {% for category, message in messages %}
+                 <div class="alert alert-{{ category }}">
+                     {{ message }}
+                 </div>
+             {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    {% block content %}
+    {% endblock content %}
+
+
+
+  
+        <script type="text/javascript" src="static/script.js"></script>
+        <script src="static/boostrap/jQuery-3.3.1.min.js"></script>
+        <script src="static/boostrap/popper.min.js"></script>
+        <script src="static/boostrap/bootstrap-4.3.1/dist/js/bootstrap.js"></script>
+   
+
+
+    <script src="static/https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="static/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="static/js/vendor/bootstrap.min.js"></script>
+
+    <script src="static/js/plugins.js"></script>
+    <script src="static/js/main.js"></script>
+    <script src="//cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
+    <script type="text/javascript">
+        CKEDITOR.replace('editor')
+    </script>
+
+</body>
+</html>
